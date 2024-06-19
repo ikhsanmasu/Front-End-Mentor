@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0px;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./asset/font/Inter/Inter-VariableFont_slnt_wght.ttf");
+}
+
+@font-face {
+  font-family: "Deca";
+  src: url("./asset/font/Lexend_Deca/LexendDeca-VariableFont_wght.ttf");
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20%;
+}
+
+.main-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 400px;
+  width: 900px;
+
+  background-color: hsl(244, 38%, 16%);
+  font-size: 14px;
+  font-family: "Inter";
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.75);
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: hsl(0, 0%, 100%);
+}
+
+.page {
+  padding: 60px;
+  /* padding-right: 100px; */
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.article {
+  margin-bottom: 80px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Deca";
+}
+.insight {
+  color: hsl(277, 64%, 61%);
+}
+
+.number {
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+.figure {
+  display: block;
+  height: 100%;
+  width: 120%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: linear-gradient(rgba(106, 7, 160, 0.6), rgba(106, 7, 160, 0.6)),
+    url(./images/image-header-mobile.jpg) center / cover no-repeat;
+}
+
+.count {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}

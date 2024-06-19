@@ -1,0 +1,158 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very_Dark_Blue: hsl(234, 12%, 34%);
+  --Grayish_Blue: hsl(229, 6%, 66%);
+  --Very_Light_Gray: hsl(0, 0%, 98%);
+}
+
+@font-face {
+  font-family: 'Poopins';
+  src: url('./font/Poppins/Poppins-Medium.ttf');
+}
+* {
+  font-family: 'Poopins';
+  font-size: 15px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+}
+
+.header {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.supervisor {
+  grid-column: 1;
+  grid-row: 2 / 4;
+  align-items: end;
+}
+
+.teambuilder {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.karma {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.calculator {
+  grid-column: 3;
+  grid-row: 2 / 4;
+  align-items: start;
+}
+
+.icon {
+  display: flex;
+  justify-content: end;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  gap: 20px;
+  padding: 40px;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.header_weak {
+  font-weight: 200;
+  font-size: 20px;
+  color: var(--Grayish_Blue);
+  font-size: 37px;
+}
+
+.header_strong {
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--Very_Dark_Blue);
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.header_description {
+  font-weight: 200;
+  font-size: 20px;
+  max-width: 700px;
+  text-align: center;
+  color: var(--Grayish_Blue);
+  margin-bottom: 4dvh;
+}
+
+.content_header {
+  font-weight: 600;
+  color: var(--Very_Dark_Blue);
+}
+
+.content_description {
+  font-weight: 200;
+  color: var(--Grayish_Blue);
+}
+
+.sup {
+  border-top: 5px solid var(--Cyan);
+}
+
+.team {
+  border-top: 5px solid var(--Red);
+}
+
+.kar {
+  border-top: 5px solid var(--Orange);
+}
+
+.cal {
+  border-top: 5px solid var(--Blue);
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    margin: 30px;
+    margin-top: 60px;
+  }
+
+  .header_weak {
+    font-size: 30px;
+  }
+
+  .header_strong {
+    font-size: 30px;
+  }
+
+  .supervisor {
+    align-items: center;
+  }
+  .calculator {
+    align-items: center;
+  }
+}

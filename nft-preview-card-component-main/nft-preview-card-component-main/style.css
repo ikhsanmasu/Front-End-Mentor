@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("./font/Outfit/Outfit-VariableFont_wght.ttf");
+}
+
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue1: hsl(217, 54%, 11%);
+  --Very-dark-blue2: hsl(216, 50%, 16%);
+  --Very-dark-blue3: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  font-size: 18px;
+  font-family: "Outfit";
+  background-color: var(--Very-dark-blue1);
+}
+
+.nft_preview_card {
+  display: flex;
+  flex-direction: column;
+  width: 23rem;
+  height: 40rem;
+  padding: 1.5rem;
+  background-color: var(--Very-dark-blue2);
+  border-radius: 0.5rem;
+}
+
+h1 {
+  color: var(--White);
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 2rem;
+}
+
+.description {
+  color: var(--Soft-blue);
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.price_timelaps {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 0.5px var(--Very-dark-blue3);
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--Cyan);
+  font-weight: 400;
+}
+
+.timelaps {
+  display: flex;
+  justify-content: center;
+  color: var(--Soft-blue);
+  font-weight: 400;
+  gap: 0.5rem;
+}
+
+.creator {
+  display: flex;
+  justify-content: flex-start;
+  color: var(--Soft-blue);
+  font-weight: 400;
+}
+
+.creator-avatar {
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem;
+  border: solid 1px white;
+  border-radius: 100%;
+}
+
+span {
+  color: white;
+}
+
+h1:hover,
+span:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+.equilibrium {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.equilibrium-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.equilibrium:hover {
+  cursor: pointer;
+}
+
+.equilibrium::before {
+  content: "";
+  background-color: cyan;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.equilibrium::after {
+  content: "";
+  background: url(./images/icon-view.svg) no-repeat center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.equilibrium:hover::before {
+  opacity: 0.4;
+}
+
+.equilibrium:hover::after {
+  opacity: 1;
+}
+
+.equilibrium {
+  position: relative;
+  display: flex;
+}
+
+.icon-price {
+  width: 1rem;
+  height: 1.5rem;
+}
+
+.icon-clock {
+  width: 1.5rem;
+  height: 1.5rem;
+}

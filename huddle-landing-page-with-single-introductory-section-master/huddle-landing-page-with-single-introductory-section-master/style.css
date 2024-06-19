@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('./asset/font/Open_Sans,Poppins/Poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./asset/font/Open_Sans,Poppins/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf');
+}
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background-image: url(./images/bg-desktop.svg);
+  background-color: hsl(257, 40%, 49%);
+
+  font-family: 'Open Sans';
+}
+
+.landing_page {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+}
+
+.main-page {
+  display: flex;
+  justify-content: flex-start;
+
+  padding: 3rem 3rem 0rem 0rem;
+}
+
+.paragraph {
+  color: white;
+  margin-left: 5rem;
+}
+
+.logo {
+  width: 50 rem;
+}
+
+.illustration-mockups {
+  width: 55rem;
+}
+
+h1 {
+  font-family: 'Poppins';
+  margin-right: 5rem;
+  font-size: 3rem;
+  margin-top: 4rem;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-right: 6rem;
+}
+
+button {
+  margin-top: 3rem;
+  border: None;
+  width: 15rem;
+  height: 3rem;
+  border-radius: 10rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(257, 40%, 49%);
+}
+
+button:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+  cursor: pointer;
+}
+
+.social_media {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.social_media_icon {
+  height: 2rem;
+  fill: black;
+  color: blue;
+}
+
+svg {
+  height: 2rem;
+  fill: white;
+  border: solid white 1px;
+  border-radius: 100%;
+  padding: 7px;
+}
+
+svg:hover {
+  fill: var(--Soft-Magenta);
+  border-color: var(--Soft-Magenta);
+}

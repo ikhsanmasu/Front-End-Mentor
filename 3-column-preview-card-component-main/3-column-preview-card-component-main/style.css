@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('./asset/font/Lexend_Deca/LexendDeca-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'Big Shoulders Display';
+  src: url('./asset/font/Big_Shoulders_Display/BigShouldersDisplay-VariableFont_wght.ttf');
+}
+
+:root {
+  --right-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Very-light-gray);
+  color: var(--Very-light-gray);
+}
+
+.preview-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 55rem;
+  height: 30rem;
+}
+
+.car-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 2.5rem;
+}
+
+#Sedans {
+  background-color: var(--right-orange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#SUVs {
+  background-color: var(--Dark-cyan);
+}
+
+#Luxury {
+  background-color: var(--Very-dark-cyan);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.car-logo {
+  margin-bottom: 2rem;
+}
+
+.car-type {
+  margin-bottom: 2rem;
+  font-family: 'Big Shoulders Display';
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.car-description {
+  margin-bottom: 6rem;
+  font-family: 'Lexend Deca';
+  font-weight: 400;
+  color: var(--Transparent-white);
+  font-size: 15px;
+  line-height: 2;
+}
+
+.learn-more-button {
+  /* margin-bottom: 2rem; */
+  font-family: 'Lexend Deca';
+  font-size: 15px;
+  font-weight: 400;
+}
+
+button {
+  width: 8rem;
+  height: 3rem;
+  border-radius: 20px;
+  border: none;
+}
+
+.sedans-button {
+  color: var(--right-orange);
+}
+.suvs-button {
+  color: var(--Dark-cyan);
+}
+.luxury-button {
+  color: var(--Very-dark-cyan);
+}
+
+button:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+@media screen and (max-width: 890px) {
+  body {
+    height: auto;
+  }
+  .preview-card {
+    flex-direction: column;
+    padding: 1.7rem;
+    height: auto;
+  }
+
+  #Sedans {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  #SUVs {
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  #Luxury {
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  .car-description {
+    margin-bottom: 1.2rem;
+  }
+}
